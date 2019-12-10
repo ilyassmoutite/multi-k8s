@@ -10,7 +10,4 @@ docker push ilyassmt/multi-client:$SHA
 docker push ilyassmt/multi-server:$SHA
 docker push ilyassmt/multi-worker:$SHA
 
-kubectl apply -f k8s
-kubectl set image deployments/server-deployment server=ilyassmt/multi-server:$SHA
-kubectl set image deployments/client-deployment client=ilyassmt/multi-client:$SHA
-kubectl set image deployments/worker-deployment worker=ilyassmt/multi-worker:$SHA
+ 
