@@ -7,10 +7,10 @@ env:
     - SHA=$(git rev-parse HEAD)
 before_install:
   - echo "123456789" | docker login -u "ilyassmt" --password-stdin
-  - docker build -t stephengrider/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t ilyassmt/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run stephengrider/react-test npm test -- --coverage
+  - docker run ilyassmt/react-test npm test -- --coverage
 
 deploy:
   provider: script
